@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>VALORIS – Logo Intro</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --dark:#0d0d0b; --dark2:#141410;
+  --gold:#b8873a; --gold-lt:#ddb15a; --gold-dk:#7a5820;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{height:100%}
+body{
+  background:var(--dark);
+  font-family:'Inter',sans-serif;
+  overflow:hidden;
+  display:flex;align-items:center;justify-content:center;
+}
+
+/* ── Atmosphäre ── */
+.stage{
+  position:fixed;inset:0;
+  display:flex;align-items:center;justify-content:center;
+  perspective:1100px;
+}
+.glow{
+  position:absolute;top:50%;left:50%;width:1000px;height:1000px;
+  transform:translate(-50%,-50%);
+  background:radial-gradient(circle,rgba(184,135,58,.10) 0%,rgba(184,135,58,.03) 30%,transparent 60%);
+  opacity:0;animation:glowIn 1.2s ease .15s forwards;
+  pointer-events:none;
+}
+@keyframes glowIn{to{opacity:1}}
+.grain{
+  position:fixed;inset:0;pointer-events:none;opacity:.25;mix-blend-mode:soft-light;
+  background-image:radial-gradient(rgba(255,255,255,.05) 1px,transparent 1px);
+  background-size:3px 3px;
+}
+
+/* ── Logo-Block ── */
+.logo{
+  position:relative;text-align:center;
+  transform-style:preserve-3d;
+  will-change:transform;
+}
+
+/* obere Haarlinie */
+.rule{
+  width:0;height:1px;margin:0 auto 26px;
+  background:linear-gradient(90deg,transparent,var(--gold) 20%,var(--gold-lt) 50%,var(--gold) 80%,transparent);
+  animation:ruleGrow 1s cubic-bezier(.16,1,.3,1) .2s forwards;
+}
+.rule.bottom{margin:30px auto 0;animation-delay:.95s}
+@keyframes ruleGrow{to{width:340px}}
+
+/* Wortmarke */
+.word{
+  display:flex;justify-content:center;gap:.02em;
+  font-family:'Cormorant Garamond',serif;
+  font-weight:300;letter-spacing:.18em;
+  font-size:clamp(3rem,12vw,7rem);
+  text-transform:uppercase;color:#fff;
+  line-height:1;
+}
+.word .ch{
+  display:inline-block;
+  transform:translateY(115%) rotateX(-60deg);
+  opacity:0;
+  animation:chIn .85s cubic-bezier(.16,1,.3,1) forwards;
+}
+.word .ch:nth-child(1){animation-delay:.30s}
+.word .ch:nth-child(2){animation-delay:.38s}
+.word .ch:nth-child(3){animation-delay:.46s}
+.word .ch:nth-child(4){animation-delay:.54s}
+.word .ch:nth-child(5){animation-delay:.62s}
+.word .ch:nth-child(6){animation-delay:.70s}
+.word .ch:nth-child(7){animation-delay:.78s}
+@keyframes chIn{to{transform:translateY(0) rotateX(0);opacity:1}}
+
+/* Gold-Shimmer-Sweep über die Wortmarke */
+.word-wrap{position:relative;display:inline-block}
+.shimmer{
+  position:absolute;inset:0;pointer-events:none;
+  background:linear-gradient(105deg,transparent 38%,rgba(255,247,230,.85) 50%,transparent 62%);
+  background-size:250% 100%;background-position:200% 0;
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+  font-family:'Cormorant Garamond',serif;font-weight:300;letter-spacing:.18em;
+  font-size:clamp(3rem,12vw,7rem);text-transform:uppercase;line-height:1;
+  display:flex;justify-content:center;gap:.02em;
+  opacity:0;
+}
+.shimmer.run{animation:sweep 1.15s ease 1.05s forwards}
+@keyframes sweep{
+  0%{opacity:1;background-position:200% 0}
+  100%{opacity:1;background-position:-120% 0}
+}
+
+/* Subline */
+.sub{
+  margin-top:18px;
+  font-size:clamp(.55rem,1.6vw,.72rem);
+  letter-spacing:.42em;text-transform:uppercase;
+  color:var(--gold-lt);font-weight:600;
+  opacity:0;transform:translateY(8px);
+  animation:subIn .9s ease 1.05s forwards;
+}
+@keyframes subIn{to{opacity:1;transform:translateY(0)}}
+
+/* Progress + Reveal */
+.bar{
+  position:fixed;left:50%;bottom:14%;transform:translateX(-50%);
+  width:min(340px,60vw);height:1px;background:rgba(255,255,255,.08);overflow:hidden;
+  opacity:0;animation:barShow .4s ease 1.2s forwards;
+}
+.bar::after{
+  content:'';position:absolute;inset:0;width:0;
+  background:linear-gradient(90deg,var(--gold),var(--gold-lt));
+  animation:fill 1.5s cubic-bezier(.7,0,.3,1) 1.3s forwards;
+}
+@keyframes barShow{to{opacity:1}}
+@keyframes fill{to{width:100%}}
+
+/* Wenn fertig: alles sanft „in die Seite" skalieren + faden */
+.stage.done{animation:enterSite 1s cubic-bezier(.7,0,.2,1) forwards}
+@keyframes enterSite{
+  0%{opacity:1;transform:scale(1)}
+  100%{opacity:0;transform:scale(1.12);filter:blur(6px)}
+}
+
+/* Replay */
+.replay{
+  position:fixed;bottom:26px;right:26px;z-index:30;
+  display:inline-flex;align-items:center;gap:8px;
+  padding:10px 18px;border:1px solid rgba(184,135,58,.4);border-radius:2px;
+  background:rgba(20,20,16,.6);backdrop-filter:blur(8px);
+  color:var(--gold-lt);font-size:.62rem;letter-spacing:.18em;text-transform:uppercase;font-weight:600;
+  cursor:pointer;transition:all .25s;opacity:0;animation:barShow .5s ease 2.6s forwards;
+}
+.replay:hover{background:var(--gold);color:#fff;border-color:var(--gold)}
+</style>
+</head>
+<body>
+<div class="stage" id="stage"></div>
+<div class="grain"></div>
+<button class="replay" id="replay">↻ Replay</button>
+
+<script>
+const stage = document.getElementById('stage');
+
+const TEMPLATE = `
+  <div class="glow"></div>
+  <div class="logo" id="logo">
+    <div class="rule"></div>
+    <div class="word-wrap">
+      <div class="word" aria-label="VALORIS">
+        <span class="ch">V</span><span class="ch">A</span><span class="ch">L</span><span class="ch">O</span><span class="ch">R</span><span class="ch">I</span><span class="ch">S</span>
+      </div>
+      <div class="shimmer run" aria-hidden="true">VALORIS</div>
+    </div>
+    <div class="sub">Webdesign &amp; SEO · Zwickau</div>
+    <div class="rule bottom"></div>
+  </div>
+  <div class="bar"></div>`;
+
+let timers = [];
+function clearTimers(){ timers.forEach(clearTimeout); timers = []; }
+
+function play(){
+  clearTimers();
+  stage.classList.remove('done');
+  stage.innerHTML = TEMPLATE;
+  void stage.offsetWidth;                       // Reflow → Animationen neu starten
+  timers.push(setTimeout(()=>stage.classList.add('done'), 3000));  // „in die Seite eintauchen"
+  timers.push(setTimeout(play, 4300));          // Loop
+}
+
+// 3D-Tilt auf Mausbewegung (subtil) — immer aktuelles #logo greifen
+window.addEventListener('mousemove', e=>{
+  if(window.innerWidth < 700) return;
+  const logo = document.getElementById('logo');
+  if(!logo) return;
+  const x = (e.clientX/window.innerWidth - .5);
+  const y = (e.clientY/window.innerHeight - .5);
+  logo.style.transform = `rotateY(${x*8}deg) rotateX(${-y*8}deg)`;
+});
+
+document.getElementById('replay').addEventListener('click', play);
+play();
+</script>
+</body>
+</html>
