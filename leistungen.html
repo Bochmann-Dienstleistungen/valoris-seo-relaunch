@@ -144,7 +144,9 @@ footer a:hover{color:var(--gold-lt)}
   .addons-grid{grid-template-columns:repeat(2,1fr)}
   .betreuung-grid{grid-template-columns:1fr}
 }
+.branchen-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:40px}
 @media(max-width:580px){.addons-grid{grid-template-columns:1fr}}
+@media(max-width:900px){.branchen-grid{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -168,9 +170,9 @@ footer a:hover{color:var(--gold-lt)}
 
 <div class="page-hero">
   <div class="page-hero-content">
-    <div class="page-eyebrow">Was wir bieten</div>
-    <h1 class="page-h">Alles, was Ihre Website<br><em>zum Erfolg braucht.</em></h1>
-    <p class="page-sub">Von der ersten Zeile Code bis zum Google-Ranking — wir übernehmen jeden Schritt, damit Sie sich auf Ihr Geschäft konzentrieren können.</p>
+    <div class="page-eyebrow">Leistungen · Zwickau</div>
+    <h1 class="page-h">Webdesign-Leistungen für lokale<br><em>Unternehmen in Zwickau</em></h1>
+    <p class="page-sub">VALORIS gestaltet individuelle Websites für lokale Unternehmen in Zwickau und Umgebung – und kümmert sich um alles, was dazugehört: von der professionellen Website über smarte Automationen bis zu optionalen Erweiterungen. Alles aus einer Hand, zum Festpreis und mit einer Demo, bevor Sie sich entscheiden.</p>
   </div>
 </div>
 
@@ -184,14 +186,34 @@ footer a:hover{color:var(--gold-lt)}
       <ul class="service-checklist">
         <li>Design auf Ihre Branche zugeschnitten (Handwerk ≠ Restaurant ≠ Dienstleister)</li>
         <li>Mobil-optimiert — 70% Ihrer Kunden kommen vom Handy</li>
-        <li>Ladezeit unter 2 Sekunden — Google belohnt das</li>
-        <li>Impressum &amp; Datenschutz inklusive (§5 TMG, DSGVO)</li>
+        <li>Schnelle Ladezeiten — für gute Platzierungen bei Google</li>
+        <li>Impressum &amp; Datenschutz inklusive — rechtssicher nach DSGVO</li>
         <li>Demo vor dem ersten Gespräch — Sie zahlen erst wenn Sie überzeugt sind</li>
       </ul>
-      <span class="service-price">Ab 990 € einmalig</span>
+      <span class="service-price">Ab 1.590 € einmalig</span>
     </div>
     <div class="service-visual reveal-right">
       <img class="service-visual-img" src="assets/img/ls-webdesign.webp" alt="Individuelles Webdesign aus Zwickau" loading="lazy" width="800" height="533">
+    </div>
+  </div>
+
+  <!-- AUTOMATIONEN -->
+  <div class="service-block reverse" id="automationen">
+    <div class="service-visual reveal-left">
+      <div class="service-visual-icon">⚙️</div>
+    </div>
+    <div class="service-text reveal-right">
+      <div class="service-text-tag">02 · Automatisierung</div>
+      <h3>Automationen,<br><em>die für Sie arbeiten</em></h3>
+      <p>Eine moderne Website kann mehr als gut aussehen — sie kann Ihnen Arbeit abnehmen. Wir verbinden Ihre Website mit smarten Abläufen, die Anfragen, Termine und Kundenkontakt automatisch organisieren. So verpassen Sie keine Anfrage mehr und sparen sich Telefonate und Zettelwirtschaft.</p>
+      <ul class="service-checklist">
+        <li>Anfragen aus Formular &amp; WhatsApp landen sofort strukturiert bei Ihnen — nichts geht unter</li>
+        <li>Automatische Eingangs-Bestätigung per E-Mail an Ihre Kunden</li>
+        <li>Online-Terminbuchung mit Kalender-Sync — Kunden buchen selbst, kein Hin-und-Her</li>
+        <li>WhatsApp-Anbindung — Kunden erreichen Sie mit einem Klick</li>
+        <li>Erweiterbar nach Bedarf (KI-Chatbot, automatische Erinnerungen) — auf Anfrage</li>
+      </ul>
+      <span class="service-price">Individuell nach Bedarf</span>
     </div>
   </div>
 
@@ -201,7 +223,7 @@ footer a:hover{color:var(--gold-lt)}
       <img class="service-visual-img" src="assets/img/ls-seo.webp" alt="Local SEO Zwickau – bei Google gefunden werden" loading="lazy" width="800" height="580">
     </div>
     <div class="service-text reveal-right" id="seo">
-      <div class="service-text-tag">02 · Sichtbarkeit</div>
+      <div class="service-text-tag">03 · Sichtbarkeit</div>
       <h3>Local SEO —<br><em>gefunden werden</em></h3>
       <p>Wenn jemand in Zwickau nach „Maler" oder „Dachdecker" sucht — soll Ihr Betrieb oben stehen. Nicht Ihr Konkurrent.</p>
       <ul class="service-checklist">
@@ -218,7 +240,7 @@ footer a:hover{color:var(--gold-lt)}
   <!-- GOOGLE ADS -->
   <div class="service-block">
     <div class="service-text reveal-left" id="google">
-      <div class="service-text-tag">03 · Wachstum</div>
+      <div class="service-text-tag">04 · Wachstum</div>
       <h3>Google Ads —<br><em>sofort sichtbar</em></h3>
       <p>SEO braucht Zeit. Google Ads bringt sofort Kunden — genau dann, wenn jemand aktiv nach Ihrer Leistung sucht.</p>
       <ul class="service-checklist">
@@ -234,6 +256,31 @@ footer a:hover{color:var(--gold-lt)}
       <img class="service-visual-img" src="assets/img/ls-ads.webp" alt="Google Ads Kampagne für lokale Betriebe in Zwickau" loading="lazy" width="800" height="530">
     </div>
   </div>
+</section>
+
+<!-- BRANCHEN (Cluster 3/4) -->
+<section id="branchen">
+  <div class="section-tag reveal">Branchen</div>
+  <h2 class="section-h reveal delay-1">Websites für<br><em>Ihre Branche</em></h2>
+  <p class="reveal delay-2" style="color:var(--warm);max-width:580px;margin-top:16px;font-size:.92rem;line-height:1.75">Jede Branche hat eigene Anforderungen – ein Handwerksbetrieb braucht eine andere Website als ein Restaurant oder ein Kosmetikstudio. Wir gestalten Ihren Auftritt passend zu Ihrem Gewerk, Ihren Kunden und der Art, wie bei Ihnen Anfragen entstehen.</p>
+  <div class="branchen-grid">
+    <div class="addon-card reveal delay-1">
+      <div class="addon-icon">🔨</div>
+      <div class="addon-title">Handwerk</div>
+      <p class="addon-desc">Für Maler, Dachdecker, Elektriker, Garten- und Landschaftsbau und weitere Gewerke. Ihre Website zeigt Ihre Arbeit mit echten Projektbildern und bringt Anfragen für neue Aufträge – direkt per Formular oder WhatsApp.</p>
+    </div>
+    <div class="addon-card reveal delay-2">
+      <div class="addon-icon">🍽️</div>
+      <div class="addon-title">Gastronomie</div>
+      <p class="addon-desc">Für Restaurants, Cafés und Bars. Mit digitaler Speisekarte, Reservierungs- oder Terminfunktion und einladenden Bildern, die Gäste anziehen und zum Besuch motivieren.</p>
+    </div>
+    <div class="addon-card reveal delay-3">
+      <div class="addon-icon">✂️</div>
+      <div class="addon-title">Dienstleister &amp; lokale Betriebe</div>
+      <p class="addon-desc">Für Friseure, Kosmetikstudios, Fotografen, KFZ-Betriebe und Einzelhandel. Ein professioneller Auftritt, der Vertrauen schafft, Ihre Leistungen klar zeigt und Online-Terminbuchung möglich macht.</p>
+    </div>
+  </div>
+  <p class="reveal" style="margin-top:28px;font-size:.85rem;color:var(--muted);max-width:580px;line-height:1.7">Sie finden Ihre Branche nicht? Kein Problem – wir gestalten Websites für lokale Unternehmen jeder Art in Zwickau und Umgebung.</p>
 </section>
 
 <!-- ADD-ONS -->
@@ -280,7 +327,7 @@ footer a:hover{color:var(--gold-lt)}
     <div class="addon-card reveal delay-3">
       <div class="addon-icon">📣</div>
       <div class="addon-title">Google Ads Kampagne</div>
-      <p class="addon-desc">Kampagnen-Setup inkl. Keyword-Recherche &amp; Conversion-Tracking. Ads-Budget nicht inbegriffen.</p>
+      <p class="addon-desc">Kampagnen-Setup inkl. Keyword-Recherche &amp; Conversion-Tracking. Werbebudget und laufende Betreuung separat.</p>
       <div class="addon-price">399 €</div>
     </div>
     <div class="addon-card reveal delay-4">
@@ -296,11 +343,11 @@ footer a:hover{color:var(--gold-lt)}
 <section id="betreuung">
   <div class="section-tag reveal">Laufende Betreuung</div>
   <h2 class="section-h reveal delay-1">Nach dem Launch —<br><em>wir bleiben dabei</em></h2>
-  <p class="reveal delay-2" style="color:var(--warm);max-width:540px;margin-top:16px;font-size:.92rem;line-height:1.75">Eine Website ist kein Einmalprodukt — sie muss gepflegt, aktuell gehalten und kontinuierlich optimiert werden. Unsere Betreuungspakete sorgen dafür, dass Ihre Seite dauerhaft performat und bei Google sichtbar bleibt.</p>
+  <p class="reveal delay-2" style="color:var(--warm);max-width:540px;margin-top:16px;font-size:.92rem;line-height:1.75">Eine Website ist kein Einmalprodukt — sie muss gepflegt, aktuell gehalten und kontinuierlich optimiert werden. Unsere Betreuung sorgt dafür, dass Ihre Seite dauerhaft performant läuft und bei Google sichtbar bleibt. Optional und monatlich kündbar — ab 299 €/Monat.</p>
   <div class="betreuung-grid">
     <div class="betr-card reveal delay-1">
       <div class="betr-tier">Starter Betreuung</div>
-      <div class="betr-price">149 €<span style="font-size:1rem;color:var(--muted)">/Monat</span></div>
+      <div class="betr-price">299 €<span style="font-size:1rem;color:var(--muted)">/Monat</span></div>
       <div class="betr-note">monatlich kündbar</div>
       <ul class="betr-features">
         <li>Inhaltspflege (Texte, Bilder, Preise)</li>
@@ -312,7 +359,7 @@ footer a:hover{color:var(--gold-lt)}
     </div>
     <div class="betr-card featured reveal delay-2">
       <div class="betr-tier">Premium Betreuung</div>
-      <div class="betr-price">199 €<span style="font-size:1rem;color:rgba(255,255,255,.3)">/Monat</span></div>
+      <div class="betr-price">399 €<span style="font-size:1rem;color:rgba(255,255,255,.3)">/Monat</span></div>
       <div class="betr-note">monatlich kündbar</div>
       <ul class="betr-features">
         <li>Alles aus Starter</li>
@@ -324,8 +371,8 @@ footer a:hover{color:var(--gold-lt)}
     </div>
     <div class="betr-card reveal delay-3">
       <div class="betr-tier">Individual Betreuung</div>
-      <div class="betr-price">399 €<span style="font-size:1rem;color:var(--muted)">/Monat</span></div>
-      <div class="betr-note">inkl. Google Ads Management</div>
+      <div class="betr-price" style="font-size:2rem">nach Umfang</div>
+      <div class="betr-note">individuell · inkl. Google Ads Management</div>
       <ul class="betr-features">
         <li>Alles aus Premium</li>
         <li>Google Ads Budget-Management</li>
