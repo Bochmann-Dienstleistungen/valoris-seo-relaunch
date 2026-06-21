@@ -291,9 +291,7 @@ footer a:hover{color:var(--gold-lt)}
               <div class="b-dot"></div><div class="b-dot"></div><div class="b-dot"></div>
               <div class="b-url">bochmann-dienstleistungen.github.io/scholz-maler-premium/</div>
             </div>
-            <div class="iframe-container">
-              <iframe src="https://bochmann-dienstleistungen.github.io/scholz-maler-premium/" loading="lazy" title="Scholz Maler Premium"></iframe>
-            </div>
+            <div class="iframe-container" style="background-image:url('assets/img/ref-scholz.webp');background-size:cover;background-position:top center;cursor:pointer" onclick="loadRefZ(this,'https://bochmann-dienstleistungen.github.io/scholz-maler-premium/')" title="Live-Vorschau laden"></div>
           </div>
         </div>
         <div class="preview-actions">
@@ -327,9 +325,7 @@ footer a:hover{color:var(--gold-lt)}
               <div class="b-dot"></div><div class="b-dot"></div><div class="b-dot"></div>
               <div class="b-url">minolo-gmbh.de</div>
             </div>
-            <div class="iframe-container">
-              <iframe src="https://minolo-gmbh.de" loading="lazy" title="Minolo GmbH"></iframe>
-            </div>
+            <div class="iframe-container" style="background-image:url('assets/img/ref-minolo.webp');background-size:cover;background-position:top center;cursor:pointer" onclick="loadRefZ(this,'https://minolo-gmbh.de')" title="Live-Vorschau laden"></div>
           </div>
         </div>
         <div class="preview-actions">
@@ -361,9 +357,7 @@ footer a:hover{color:var(--gold-lt)}
               <div class="b-dot"></div><div class="b-dot"></div><div class="b-dot"></div>
               <div class="b-url">Lack-Design-Zwickau</div>
             </div>
-            <div class="iframe-container">
-              <iframe src="https://bochmann-dienstleistungen.github.io/Lack-Design-Zwickau/" loading="lazy" title="Lack Design Zwickau"></iframe>
-            </div>
+            <div class="iframe-container" style="background-image:url('assets/img/ref-lack.webp');background-size:cover;background-position:top center;cursor:pointer" onclick="loadRefZ(this,'https://bochmann-dienstleistungen.github.io/Lack-Design-Zwickau/')" title="Live-Vorschau laden"></div>
           </div>
         </div>
         <div class="preview-actions">
@@ -395,9 +389,7 @@ footer a:hover{color:var(--gold-lt)}
               <div class="b-dot"></div><div class="b-dot"></div><div class="b-dot"></div>
               <div class="b-url">bochmann-dienstleistungen.github.io/Seiler/</div>
             </div>
-            <div class="iframe-container">
-              <iframe src="https://bochmann-dienstleistungen.github.io/Seiler/" loading="lazy" title="Malerwerkstätte Seiler"></iframe>
-            </div>
+            <div class="iframe-container" style="background-image:url('assets/img/ref-seiler.webp');background-size:cover;background-position:top center;cursor:pointer" onclick="loadRefZ(this,'https://bochmann-dienstleistungen.github.io/Seiler/')" title="Live-Vorschau laden"></div>
           </div>
         </div>
         <div class="preview-actions">
@@ -456,6 +448,12 @@ footer a:hover{color:var(--gold-lt)}
 <script>
 // Nav
 function toggleMenu(){ document.getElementById('navMobile').classList.toggle('open') }
+function loadRefZ(el,url){
+  if(el.dataset.loaded)return; el.dataset.loaded='1'; el.style.cursor='default';
+  var f=document.createElement('iframe');
+  f.src=url; f.loading='lazy'; f.title='Live-Vorschau';
+  el.appendChild(f);
+}
 
 // Reveal
 const observer = new IntersectionObserver(entries=>{
